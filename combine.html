@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Com</title>
+
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary-purple:#6f57f0;
+      --soft-purple:#F1F0FE;
+      --text-muted:#787c85;
+      --shadow-card:0 8px 22px rgba(111,87,240,0.12);
+      --max-width:1100px;
+    }
+    body{
+      font-family:'Inter',sans-serif;
+      color:#222;
+      scroll-behavior:smooth;
+    }
+    /* NAVBAR */
+    .navbar-custom{
+      background:var(--primary-purple);
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
+    }
+    .navbar-custom .nav-link{
+      color:#fff !important;
+      font-weight:600;
+      margin:0 6px;
+    }
+    .logo-pill{
+      /* background:#fff;
+      color:var(--primary-purple); */
+      color: white;
+      /* padding:6px 14px; */
+            padding:6px 8px;
+      border-radius:99px;
+      font-weight:700;
+      box-shadow:0 3px 8px rgba(0,0,0,0.08);
+    }
+    /* GENERAL */
+    .section-title{font-weight:800;margin-bottom:12px;}
+    .text-muted{color:var(--text-muted)!important;}
+ 
+    /* INTRO */
+    .intro{padding:60px 0;}
+    .intro img{border-radius:18px;box-shadow:var(--shadow-card);transition:transform .35s;}
+    .intro img:hover{transform:translateY(-6px);}
+
+
+     /* ABOUT */
+    .about{background:var(--soft-purple);padding:60px 0;}
+    .about img{border-radius:18px;box-shadow:var(--shadow-card);}
+
+
+    @media(max-width:768px){
+
+      .intro,.about,.booking{padding:20px 0;}
+      .btn-book{width:100%;}
+      .hide{
+        display: none;
+      }
+        .reveal h2 {
+    text-align: center; /* Center the heading */
+  }
+
+  .reveal p {
+    text-align: center; /* Justify the paragraph */
+  }
+
+   .section-title{
+    text-align: center;
+   }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container" style="max-width:var(--max-width);">
+    <a class="navbar-brand" href="#">
+      <div class="logo-pill">LOGO</div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon" style="filter:invert(1)"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#booking">Session</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="container" style="max-width:var(--max-width);">
+    <div class="row g-4 align-items-center">
+      <div class="col-md-3 text-center">
+        <div class="mb-3"><img src="https://placehold.co/300x300/6f57f0/fff?text=English" class="img-fluid reveal hide" ></div>
+        <div><img src="https://placehold.co/300x300/f5f5f5/6f57f0?text=Fluency" class="img-fluid reveal hide" ></div>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="https://placehold.co/400x500/ddd/000?text=Communication" class="img-fluid reveal">
+      </div>
+      <div class="col-md-5">
+        <div class="reveal">
+          <h1 class="section-title">Master English Communication</h1>
+          <p class="text-muted">One-on-one sessions to improve fluency, confidence, pronunciation, and real-world conversation skills. Tailored sessions for interviews, public speaking, travel, and more.</p>
+          <ul class="text-muted mt-3">
+            <li>Personalized feedback</li>
+            <li>Pronunciation & speaking drills</li>
+            <li>Build real-life conversation skills</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="container" style="max-width:var(--max-width);">
+    <div class="row g-4 align-items-center">
+      <div class="col-md-5 text-center">
+        <img src="https://placehold.co/400x400/000/fff?text=Your+Photo" class="img-fluid reveal">
+      </div>
+      <div class="col-md-7">
+        <div class="reveal">
+          <h2 class="section-title">About Me</h2>
+          <p class="text-muted">Hello, I'm your English communication coach. I help people become confident and fluent speakers through interactive, practice-based sessions and targeted feedback.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap + Scroll animation JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const items=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})
+},{threshold:.15});
+items.forEach(i=>obs.observe(i));
+</script>
+</body>
+</html>
