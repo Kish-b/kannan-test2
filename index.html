@@ -16,6 +16,7 @@
     :root{
       --primary-purple:#6f57f0;
       --soft-purple:#F1F0FE;
+          --primary-purple-dark: #5b47d8;
       --text-muted:#787c85;
       --shadow-card:0 8px 22px rgba(111,87,240,0.12);
       --max-width:1100px;
@@ -56,14 +57,44 @@
 
 
      /* ABOUT */
-    .about{background:var(--soft-purple);padding:60px 0;}
-    .about img{border-radius:18px;box-shadow:var(--shadow-card);}
+    .about{background:var(--soft-purple);padding:60px 0; }
+    .about img{border-radius:18px;box-shadow:var(--shadow-card);transition:transform .35s;}
+   .about img:hover{transform:translateY(-6px);}
+
+
+
+    /* BOOKING */
+    .booking{padding:60px 0;}
+    .price-tag{
+      display:inline-flex;align-items:center;
+      gap:10px; 
+      background: rgba(245,241,255,0.8); padding:10px 14px; border-radius: 12px;
+      /* padding:10px 16px; */
+            padding:10px  32px 10px 16px;
+      border-radius:14px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    }
+    .btn-book{
+      background:linear-gradient(180deg,var(--primary-purple),#5d47da);
+      color:#fff;
+      border:none;
+      border-radius:50px;
+      /* padding:14px 32px; */
+            padding:14px 100px;
+      font-weight:700;
+      box-shadow:0 6px 16px rgba(111,87,240,0.25);
+      transition:transform .2s;
+    }
+    .btn-book:hover{transform:translateY(-4px);}
+
+
 
 
     @media(max-width:768px){
 
       .intro,.about,.booking{padding:20px 0;}
       .btn-book{width:100%;}
+       .price-tag{width:70%;}
       .hide{
         display: none;
       }
@@ -78,7 +109,20 @@
    .section-title{
     text-align: center;
    }
+
+.navbar-custom {
+    position: sticky;
+    top: 0;
+    z-index: 1030; /* Make sure it stays above content */
+  }
+
+
+
     }
+
+
+
+    
   </style>
 </head>
 <body>
@@ -137,7 +181,7 @@
   <div class="container" style="max-width:var(--max-width);">
     <div class="row g-4 align-items-center">
       <div class="col-md-5 text-center">
-        <img src="https://placehold.co/400x400/000/fff?text=Your+Photo" class="img-fluid reveal">
+        <img src="img.jpg" class="img-fluid reveal">
       </div>
       <div class="col-md-7">
         <div class="reveal">
@@ -153,10 +197,33 @@
 
 
 
-
-
-
-
+<!-- BOOKING -->
+<section id="booking" class="booking">
+  <div class="container" style="max-width:var(--max-width);">
+    <div class="row g-4 align-items-center flex-column-reverse flex-md-row">
+      <div class="col-md-6">
+        <div class="reveal">
+          <h2 class="section-title">One-on-One Session</h2>
+          <p class="text-muted">60-minute sessions with speaking practice, exercises, and feedback. Ideal for interviews, presentations, or general fluency improvement.</p>
+          <div class="price-tag mt-3">
+            <div style="width:44px;height:44px;border-radius:10px;background:#efe6ff;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--primary-purple)">₹</div>
+            <div>
+              <div class="text-muted" style="font-size:0.9rem;">Per session</div>
+              <div style="font-weight:700;font-size:1.2rem;">1000</div>
+            </div>
+          </div>
+              <div >
+            <button class="btn-book mt-4">Book Now</button>
+          </div>
+          
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="https://placehold.co/500x350/eee/000?text=Session+Image" class="img-fluid rounded reveal">
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
