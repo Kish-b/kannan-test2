@@ -1,227 +1,178 @@
-<!-- <!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<link rel="stylesheet" href="style.css">
-<style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Com</title>
 
 
-  
-</style>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-</head>
-<body class="">
-      <nav class="navbar navbar-expand-lg navbar-dark sticky-top custom-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Document</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">service</a></li>
-         <li class="nav-item"><a class="nav-link" href="#">contact us</a></li>
-            <a href="" class="btn btn-primary btn-md">BOOK!</a>
-
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <main>
-
-
-<div class=" col-md-11 ">
-
-
-
-<div class="card bg-dark">
-
-
-</div>
-
-</div>
-
-    </main>
-
-
-
-</body>
-</html> -->
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Website</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      scroll-behavior: smooth;
+    :root{
+      --primary-purple:#6f57f0;
+      --soft-purple:#F1F0FE;
+      --text-muted:#787c85;
+      --shadow-card:0 8px 22px rgba(111,87,240,0.12);
+      --max-width:1100px;
     }
-    /* Smooth fade-in */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease-in-out;
+    body{
+      font-family:'Inter',sans-serif;
+      color:#222;
+      scroll-behavior:smooth;
     }
-    .fade-in.show {
-      opacity: 1;
-      transform: translateY(0);
+    /* NAVBAR */
+    .navbar-custom{
+      background:var(--primary-purple);
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
     }
-    /* Hero image */
-    .hero-img {
-      max-width: 100%;
-      border-radius: 10px;
+    .navbar-custom .nav-link{
+      color:#fff !important;
+      font-weight:600;
+      margin:0 6px;
     }
-    /* Footer */
-    .footer {
-      background: #212529;
-      color: #fff;
-      padding: 30px 0;
+    .logo-pill{
+      /* background:#fff;
+      color:var(--primary-purple); */
+      color: white;
+      /* padding:6px 14px; */
+            padding:6px 8px;
+      border-radius:99px;
+      font-weight:700;
+      box-shadow:0 3px 8px rgba(0,0,0,0.08);
     }
-    .footer a {
-      color: #f8f9fa;
-      margin: 0 10px;
-      transition: color 0.3s;
-    }
-    .footer a:hover {
-      color: #0d6efd;
+    /* GENERAL */
+    .section-title{font-weight:800;margin-bottom:12px;}
+    .text-muted{color:var(--text-muted)!important;}
+ 
+    /* INTRO */
+    .intro{padding:60px 0;}
+    .intro img{border-radius:18px;box-shadow:var(--shadow-card);transition:transform .35s;}
+    .intro img:hover{transform:translateY(-6px);}
+
+
+     /* ABOUT */
+    .about{background:var(--soft-purple);padding:60px 0;}
+    .about img{border-radius:18px;box-shadow:var(--shadow-card);}
+
+
+    @media(max-width:768px){
+
+      .intro,.about,.booking{padding:20px 0;}
+      .btn-book{width:100%;}
+      .hide{
+        display: none;
+      }
+        .reveal h2 {
+    text-align: center; /* Center the heading */
+  }
+
+  .reveal p {
+    text-align: center; /* Justify the paragraph */
+  }
+
+   .section-title{
+    text-align: center;
+   }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">MySite</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#session">Session</a></li>
-          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container" style="max-width:var(--max-width);">
+    <a class="navbar-brand" href="#">
+      <div class="logo-pill">LOGO</div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon" style="filter:invert(1)"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#booking">Session</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="container" style="max-width:var(--max-width);">
+    <div class="row g-4 align-items-center">
+      <div class="col-md-3 text-center">
+        <div class="mb-3"><img src="https://placehold.co/300x300/6f57f0/fff?text=English" class="img-fluid reveal hide" ></div>
+        <div><img src="https://placehold.co/300x300/f5f5f5/6f57f0?text=Fluency" class="img-fluid reveal hide" ></div>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="https://placehold.co/400x500/ddd/000?text=Communication" class="img-fluid reveal">
+      </div>
+      <div class="col-md-5">
+        <div class="reveal">
+          <h1 class="section-title">Master English Communication</h1>
+          <p class="text-muted">One-on-one sessions to improve fluency, confidence, pronunciation, and real-world conversation skills. Tailored sessions for interviews, public speaking, travel, and more.</p>
+          <ul class="text-muted mt-3">
+            <li>Personalized feedback</li>
+            <li>Pronunciation & speaking drills</li>
+            <li>Build real-life conversation skills</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- Hero Section -->
-  <section id="hero" class="py-5">
-    <div class="container">
-      <div class="row align-items-center fade-in">
-        <div class="col-md-6">
-          <img src="img.jpg" alt="Hero" class="hero-img img-fluid">
-        </div>
-        <div class="col-md-6">
-          <h2 class="fw-bold">Welcome to My Website</h2>
-          <p>Struggling with fluency?  It's not that you don't know what to say… it's that you don't know how to say it  That's where I step in 
-Hi , I'm Prahalath Kannan ,I'm a Public speaker(who motivates and help people to speak English )...
-When I was 15..
-I was an introvert ,I was timid and shy. I was scared to speak with people because of my fear of judgement..
-When i spoke I-
-        stuttered 
-        Mumble(spoke too fast)
-        Blabbered(because of poormouth movements)
 
-But when i learnt to speak English ,my Life completely changed.
-Later i found a way to overcome my fear of judgement
-I learnt techniques, mindset shifts and practice methods that helped me overcome my problems when speaking English!
-Now I can help you speak English 
-All you have to do is Talk with P.K</p>
+
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="container" style="max-width:var(--max-width);">
+    <div class="row g-4 align-items-center">
+      <div class="col-md-5 text-center">
+        <img src="https://placehold.co/400x400/000/fff?text=Your+Photo" class="img-fluid reveal">
+      </div>
+      <div class="col-md-7">
+        <div class="reveal">
+          <h2 class="section-title">About Me</h2>
+          <p class="text-muted">Hello, I'm your English communication coach. I help people become confident and fluent speakers through interactive, practice-based sessions and targeted feedback.</p>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Session Section -->
-  <section id="session" class="py-5 bg-light text-center">
-    <div class="container fade-in">
-      <h2 class="fw-bold">One on One Session</h2>
-      <p class="mb-4">Get personalized guidance and insights to help you grow and succeed.</p>
-    </div>
-  <!-- Features Section -->
-        <div class="container fade-in">
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <i class="bi bi-lightbulb display-4 text-primary"></i>
-          <h5 class="mt-3">Creative Ideas</h5>
-          <p>Innovative approaches tailored just for you.</p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <i class="bi bi-people display-4 text-success"></i>
-          <h5 class="mt-3">Personal Guidance</h5>
-          <p>One-on-one mentoring for your success.</p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <i class="bi bi-rocket display-4 text-danger"></i>
-          <h5 class="mt-3">Fast Growth</h5>
-          <p>Accelerate your journey with proven strategies.</p>
-        </div>
-      </div>
-      <a href="#contact" class="btn btn-primary btn-lg mt-3">Book</a>
-    </div>
-  </section>
+  </div>
+</section>
 
 
 
 
-  <!-- Contact Section -->
-  <footer id="contact" class="footer text-center">
-    <div class="container">
-      <h5>Contact Us</h5>
-      <p>Email: example@mail.com | Phone: +91 9876543210</p>
-      <div>
-        <a href="#"><i class="bi bi-facebook fs-4"></i></a>
-        <a href="#"><i class="bi bi-twitter fs-4"></i></a>
-        <a href="#"><i class="bi bi-instagram fs-4"></i></a>
-        <a href="#"><i class="bi bi-linkedin fs-4"></i></a>
-      </div>
-    </div>
-  </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Animation trigger on scroll
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.2 };
 
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target);
-      });
-    }, appearOptions);
 
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
-    });
-  </script>
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap + Scroll animation JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const items=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})
+},{threshold:.15});
+items.forEach(i=>obs.observe(i));
+</script>
 </body>
 </html>
