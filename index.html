@@ -65,6 +65,9 @@
 
     /* BOOKING */
     .booking{padding:60px 0;}
+        .booking img{border-radius:18px;box-shadow:var(--shadow-card);transition:transform .35s;}
+   .booking img:hover{transform:translateY(-6px);}
+
     .price-tag{
       display:inline-flex;align-items:center;
       gap:10px; 
@@ -92,7 +95,9 @@
 
     @media(max-width:768px){
 
-      .intro,.about,.booking{padding:40px 0;}
+      .intro{padding:10px 0 30px 0;}
+      
+      .about,.booking{padding:30px 0;}
       .btn-book{width:100%;}
        .price-tag{width:70%;}
       .hide{
@@ -116,7 +121,7 @@
     z-index: 1030; /* Make sure it stays above content */
   }
 
-
+  
 
     }
 
@@ -156,7 +161,7 @@
         <div><img src="https://placehold.co/300x300/f5f5f5/6f57f0?text=Fluency" class="img-fluid reveal hide" ></div>
       </div>
       <div class="col-md-4 text-center">
-        <img src="https://placehold.co/400x500/ddd/000?text=Communication" class="img-fluid reveal">
+        <img src="img1.jpg" class="img-fluid reveal">
       </div>
       <div class="col-md-5">
         <div class="reveal">
@@ -180,15 +185,29 @@
 <section id="about" class="about">
   <div class="container" style="max-width:var(--max-width);">
     <div class="row g-4 align-items-center">
-      <div class="col-md-5 text-center">
-        <img src="img.jpg" class="img-fluid reveal">
+
+      <!-- Mobile-only heading (visible on xs-sm, hidden on md+) -->
+      <div class="col-12 d-block d-md-none">
+        <h2 class="section-title text-center">About Me</h2>
       </div>
-      <div class="col-md-7">
+
+      <!-- Image column -->
+      <div class="col-md-5 text-center order-2 order-md-1">
+        <img src="img.jpg" class="img-fluid reveal" alt="Coach photo">
+      </div>
+
+      <!-- Text column (desktop heading + paragraph) -->
+      <div class="col-md-7 order-3 order-md-2">
         <div class="reveal">
-          <h2 class="section-title">About Me</h2>
-          <p class="text-muted">Hello, I'm your English communication coach. I help people become confident and fluent speakers through interactive, practice-based sessions and targeted feedback.</p>
+          <!-- Desktop-only heading (hidden on mobile) -->
+          <h2 class="section-title d-none d-md-block">About Me</h2>
+
+          <p class="text-muted">
+            Hello, I'm your English communication coach. I help people become confident and fluent speakers through interactive, practice-based sessions and targeted feedback.
+          </p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -200,11 +219,29 @@
 <!-- BOOKING -->
 <section id="booking" class="booking">
   <div class="container" style="max-width:var(--max-width);">
-    <div class="row g-4 align-items-center flex-column-reverse flex-md-row">
-      <div class="col-md-6">
+    <div class="row g-4 align-items-center">
+
+      <!-- Mobile-only heading (top) -->
+      <div class="col-12 d-block d-md-none order-1">
+        <h2 class="section-title text-center">One-on-One Session</h2>
+      </div>
+
+      <!-- Image column -->
+      <div class="col-md-6 text-center order-2 order-md-2">
+        <img src="img2.png" class="img-fluid rounded reveal">
+      </div>
+
+      <!-- Text column -->
+      <div class="col-md-6 order-3 order-md-1">
         <div class="reveal">
-          <h2 class="section-title">One-on-One Session</h2>
-          <p class="text-muted">60-minute sessions with speaking practice, exercises, and feedback. Ideal for interviews, presentations, or general fluency improvement.</p>
+          <!-- Desktop-only heading -->
+          <h2 class="section-title d-none d-md-block">One-on-One Session</h2>
+
+          <p class="text-muted">
+            60-minute sessions with speaking practice, exercises, and feedback.
+            Ideal for interviews, presentations, or general fluency improvement.
+          </p>
+
           <div class="price-tag mt-3">
             <div style="width:44px;height:44px;border-radius:10px;background:#efe6ff;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--primary-purple)">₹</div>
             <div>
@@ -212,15 +249,13 @@
               <div style="font-weight:700;font-size:1.2rem;">1000</div>
             </div>
           </div>
-              <div >
+
+          <div>
             <button class="btn-book mt-4">Book Now</button>
           </div>
-          
         </div>
       </div>
-      <div class="col-md-6 text-center">
-        <img src="https://placehold.co/500x350/eee/000?text=Session+Image" class="img-fluid rounded reveal">
-      </div>
+
     </div>
   </div>
 </section>
@@ -243,4 +278,3 @@ items.forEach(i=>obs.observe(i));
 </script>
 </body>
 </html>
-
