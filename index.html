@@ -75,17 +75,29 @@
     .text-muted{color:var(--text-muted)!important;}
 
     /* INTRO */
-    .intro{padding:60px 0;}
+    .intro{
+      padding:60px 0;
+      background: var(--primary-purple);
+      color: #fff;
+    }
+    .intro h1, 
+    .intro p { color: #fff; }
     .intro img{border-radius:18px;box-shadow:var(--shadow-card);transition:transform .35s;}
     .intro img:hover{transform:translateY(-6px);}
 
     /* ABOUT */
-    .about{background:var(--soft-purple);padding:60px 0; }
+    .about{background: #fff; ;padding:60px 0; }
     .about img{border-radius:18px;box-shadow:var(--shadow-card);transition:transform .35s;}
     .about img:hover{transform:translateY(-6px);}
 
     /* BOOKING */
-    .booking{padding:60px 0;}
+    .booking{
+      padding:60px 0;
+      background: var(--soft-purple);
+      color:#222;
+    }
+    .booking h2, 
+    .booking p { color:#222; }
     .booking img{border-radius:18px;box-shadow:var(--shadow-card);transition:transform .35s;}
     .booking img:hover{transform:translateY(-6px);}
     .price-tag{
@@ -108,7 +120,11 @@
     .btn-book:hover{transform:translateY(-4px);}
 
     /* FEATURES */
-    .features{ padding:48px 0; background:var(--soft-purple); }
+    .features{ 
+      padding:48px 0; 
+      background:#fff; 
+      color:#222;
+    }
     .feature-card{ text-align:center; padding:18px; border-radius:14px; transition:transform .25s; background:#fff;}
     .feature-card:hover{ transform: translateY(-6px); }
     .feature-icon{
@@ -119,7 +135,8 @@
 
     /* Footer */
     .footer {
-      color: #000000;
+      color: #222;
+      background: var(--soft-purple);
       padding: 30px 0;
     }
     .footer a {
@@ -186,7 +203,7 @@
       <div class="col-md-5">
         <div class="reveal">
           <h1 class="section-title">Find Your Voice. Speak English with Confidence.</h1>
-          <p class="text-muted">If you’ve always wanted to speak English but something keeps holding you back — this is the place for you.
+          <p>If you’ve always wanted to speak English but something keeps holding you back — this is the place for you.
 Here, you’ll find guidance, motivation, and practical support to help you speak freely and confidently, without fear or hesitation.</p>
         </div>
       </div>
@@ -232,7 +249,7 @@ I help people who struggle with English to find their voice, build their confide
       <div class="col-md-6 order-3 order-md-1">
         <div class="reveal">
           <h2 class="section-title d-none d-md-block">1-on-1 Sessions</h2>
-          <p class="text-muted">
+          <p>
           60-minute 1-on-1 sessions with techniques, mindset shifts, and practice methods to help you overcome any struggles while speaking English. Perfect for tackling issues like stuttering, speaking continuously, unclear speech, going blank on the spot, anxiety, accent challenges, and more.
           </p>
           <div class="price-tag mt-3">
@@ -257,8 +274,6 @@ I help people who struggle with English to find their voice, build their confide
     <div class="row g-4">
        <h2 class="section-title text-center">Features</h2>
       <div class="col-md-4">
-       
-   
         <div class="feature-card reveal">
           <div class="feature-icon">
             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.6">
@@ -302,7 +317,6 @@ I help people who struggle with English to find their voice, build their confide
 <!-- Contact Section -->
 <footer id="contact" class="footer text-center">
   <div class="container">
-    
      <h2 class="section-title text-center">Contact Us</h2>
     <p>
       <span>Email: Kannan@gmail.com</span>
